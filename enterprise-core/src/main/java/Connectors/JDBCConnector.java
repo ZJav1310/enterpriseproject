@@ -15,6 +15,15 @@ public class JDBCConnector implements DataSourceConnector {
     }
 
     private void initialiseConnection() {
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+        }
+        catch(ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+
         try {
             String url = String.format("jdbc:mysql://%s:%s/%s", d.getUrl(), d.getPort(), d.getSchema());
             this.c = DriverManager.getConnection(url, d.getUser(), d.getPass());

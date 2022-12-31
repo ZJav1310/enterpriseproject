@@ -8,6 +8,7 @@ import Queries.FilmQuery;
 import javax.xml.parsers.ParserConfigurationException;
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.function.Predicate;
 
 /**
  * This class purpose is to be the bridge between this back end and whatever interface to exist.
@@ -78,5 +79,9 @@ public class Commands {
      */
     public Film getById(int id) {
         return filmQuery.getById(id);
+    }
+
+    public Collection<Film> searchByTitle(String title) {
+        return filmQuery.search((o) -> o.getTitle().contains(title));
     }
 }
