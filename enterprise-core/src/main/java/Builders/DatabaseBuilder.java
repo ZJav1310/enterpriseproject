@@ -56,7 +56,7 @@ public class DatabaseBuilder {
 //        String FILENAME = "/src/main/java/Configuration/DataSources.xml";
         String FILENAME = "../Configuration/DataSources.xml";
 
-        String guess = "C:\\Users\\ZTedd\\IdeaProjects\\Enterprise_Assignment\\src\\main\\java\\Configuration\\DataSources.xml";
+        String guess = "C:\\Users\\ZTedd\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\DataSources.xml";
         String ROOTPATH = new File("").getAbsolutePath();
 //        NodeList dbNodeList = reader.readFile(ROOTPATH + FILENAME).getElementsByTagName("Database");
         NodeList dbNodeList = reader.readFile(guess).getElementsByTagName("Database");
@@ -84,7 +84,7 @@ public class DatabaseBuilder {
 //        String FILENAME = "/src/main/java/Configuration/ServerConfig.xml";
 //        String ROOTPATH = new File("").getAbsolutePath();
 //        File file = new File(ROOTPATH + FILENAME);
-        File file = new File("C:\\Users\\ZTedd\\IdeaProjects\\Enterprise_Assignment\\src\\main\\java\\Configuration\\ServerConfig.xml");
+        File file = new File("C:\\Users\\ZTedd\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\ServerConfig.xml");
 
         XmlMapper xmlMapper = new XmlMapper();
         try {
