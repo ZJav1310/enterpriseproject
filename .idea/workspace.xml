@@ -11,23 +11,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="began work on api">
-      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/DataSources.JSON" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" afterDir="false" />
+    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="Reworked how file is being read, JSON and XML serialise and deserialise implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/DataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/JDBCConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/JDBCConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/ServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/JSONReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/Film.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +204,7 @@
       <workItem from="1672943990603" duration="5304000" />
       <workItem from="1673014320429" duration="6798000" />
       <workItem from="1673045544997" duration="13601000" />
-      <workItem from="1673093158421" duration="11474000" />
+      <workItem from="1673093158421" duration="15554000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -239,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672517873970</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Reworked how file is being read, JSON and XML serialise and deserialise implemented.">
+      <created>1673104717210</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673104717210</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +254,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Core and servlet complete." />
     <MESSAGE value="began work on api" />
-    <option name="LAST_COMMIT_MESSAGE" value="began work on api" />
+    <MESSAGE value="Reworked how file is being read, JSON and XML serialise and deserialise implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked how file is being read, JSON and XML serialise and deserialise implemented." />
   </component>
 </project>

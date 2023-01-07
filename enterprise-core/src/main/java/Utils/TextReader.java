@@ -1,8 +1,8 @@
 package Utils;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import java.lang.reflect.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class TextReader implements Reader {
     @Override
@@ -17,7 +17,14 @@ public class TextReader implements Reader {
 
     @Override
     public <T> T deserialiseObject(String textString, Class<T> tClass) {
-        throw new UnsupportedOperationException("Can not deserialize text yet.");
+        String text = textString.replace("#", "");
+        List<String> convertedTextList = Arrays.asList(text.split("\\|"));
+        try {
+            Constructor<?> c = tClass.getDeclaredConstructor(List.class);
+            return (T) c.newInstance(convertedTextList);
+        } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
