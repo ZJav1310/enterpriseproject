@@ -1,9 +1,12 @@
 package Models;
 
+import com.fasterxml.jackson.xml.annotate.JacksonXmlProperty;
+import com.fasterxml.jackson.xml.annotate.JacksonXmlRootElement;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
+@Deprecated
 public class DataSourceProperties {
+
     private final String name;
     private final String url;
     private final String user;
@@ -20,6 +23,7 @@ public class DataSourceProperties {
         this.schema = schema;
     }
 
+    // TODO: Use XMLMapper?
     public DataSourceProperties(Node database) {
         NamedNodeMap attr = database.getAttributes();
 

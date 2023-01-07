@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Databases>
-    <Database user="root" pass="SiB*u5YMw@Yzd*" url="127.0.0.1" name="Local" port="3306" schema="universityenterprise"/>
-    <Database url="mudfoot.doc.stu.mmu.ac.uk" user="javaidzo" pass="cRegholp4" name="Mudfoot" port="6306" schema="javaidzo"/>
-    <Database name="AWS" pass="" port="" url="" user="" schema=""/>
-</Databases>

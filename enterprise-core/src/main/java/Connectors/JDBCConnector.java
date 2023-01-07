@@ -1,5 +1,6 @@
 package Connectors;
 
+import Models.DataSourceProp;
 import Models.DataSourceProperties;
 
 import java.sql.Connection;
@@ -7,17 +8,21 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class JDBCConnector implements DataSourceConnector {
-    private final DataSourceProperties d;
+    private final DataSourceProp d;
     private Connection c;
 
-    public JDBCConnector(DataSourceProperties d) {
+//    public JDBCConnector(DataSourceProperties d) {
+//        this.d = d;
+//    }
+
+    public JDBCConnector(DataSourceProp d) {
         this.d = d;
     }
 
     private void initialiseConnection() {
         try
         {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         }
         catch(ClassNotFoundException e)
         {

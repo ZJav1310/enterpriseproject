@@ -1,30 +1,26 @@
 package Utils;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.xml.sax.SAXException;
-
-import javax.xml.XMLConstants;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
+import com.fasterxml.jackson.xml.XmlMapper;
 import java.io.IOException;
 
 public class XMLReader implements Reader {
 
-    public Element readFile(String XMLFilePath) throws ParserConfigurationException {
-
+    // serialize object to XML
+    public String serialiseObject(Object input){
         try {
-            var factory = DocumentBuilderFactory.newInstance();
-            // Avoid XXE attacks
-            factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-            var builder = factory.newDocumentBuilder();
-            Document document = builder.parse(XMLFilePath);
-            document.getDocumentElement().normalize();
-            return document.getDocumentElement();
-        } catch (SAXException | IOException e) {
-            e.printStackTrace();
+            return new XmlMapper().writeValueAsString(input);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        return null;
+
+    }
+
+    public <T> T deserialiseObject(String XMLString, Class<T> tClass){
+        try {
+            return new XmlMapper().readValue(XMLString, tClass);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

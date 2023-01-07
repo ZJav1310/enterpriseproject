@@ -11,14 +11,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="Core and servlet complete.">
-      <change afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" afterDir="false" />
+    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="began work on api">
+      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/DataSources.JSON" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/HelloResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/DataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/JDBCConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/JDBCConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/ServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/JSONReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +42,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,30 +73,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ZTedd/IdeaProjects/enterpriseproject/enterprise-core/src/main/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/ZTedd/IdeaProjects/enterpriseproject/enterprise-core/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ZTedd\IdeaProjects\enterpriseproject\enterprise-core\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.main">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="enterprise-core" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -176,6 +194,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -187,7 +210,13 @@
       <updated>1672415472515</updated>
       <workItem from="1672415473549" duration="5729000" />
       <workItem from="1672446958850" duration="4375000" />
-      <workItem from="1672490697388" duration="15951000" />
+      <workItem from="1672490697388" duration="17421000" />
+      <workItem from="1672601614673" duration="832000" />
+      <workItem from="1672786558927" duration="2754000" />
+      <workItem from="1672943990603" duration="5304000" />
+      <workItem from="1673014320429" duration="6798000" />
+      <workItem from="1673045544997" duration="13601000" />
+      <workItem from="1673093158421" duration="11474000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -203,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672450078089</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="began work on api">
+      <created>1672517873970</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672517873970</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +258,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Core and servlet complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Core and servlet complete." />
+    <MESSAGE value="began work on api" />
+    <option name="LAST_COMMIT_MESSAGE" value="began work on api" />
   </component>
 </project>
