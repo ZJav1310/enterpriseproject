@@ -1,8 +1,10 @@
 package Models;
 
+import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 public class Film {
     int id;
@@ -60,21 +62,15 @@ public class Film {
 
     @Override
     public String toString() {
-        return "Film [id=" + id + ", title=" + title + ", year=" + year + ", director=" + director + ", stars=" + stars
-                + ", review=" + review + "]";
+//        return "Film [id=" + id + ", title=" + title + ", year=" + year + ", director=" + director + ", stars=" + stars
+//                + ", review=" + review + "]";
+        return "#" + id + "|" + title + "|" + year + "|" + director + "|" + stars
+                + "|" + review;
     }
 
-    public LinkedHashMap<String, String> toArray() {
-        LinkedHashMap<String, String> film = new LinkedHashMap<>();
-
-        film.put("id", String.valueOf(id));
-        film.put("title", title);
-        film.put("year", String.valueOf(year));
-        film.put("director", director);
-        film.put("stars", stars);
-        film.put("review", review);
-
-        return film;
+    // id|title|year|director|stars|reviews
+    public Film(List<String> stringList){
+        this(Integer.parseInt(stringList.get(0)), stringList.get(1), Integer.parseInt(stringList.get(2)), stringList.get(3),stringList.get(4), stringList.get(5));
     }
 
 }
