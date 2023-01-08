@@ -32,9 +32,9 @@ public class Film {
         this(0, title, year, director, stars, review);
     }
 
-    public Film(ResultSet resultSet) throws SQLException {
-        this(Integer.parseInt(resultSet.getString("id")), resultSet.getString("title"), Integer.parseInt(resultSet.getString("year")), resultSet.getString("director"), resultSet.getString("stars"), resultSet.getString("review"));
-    }
+//    public Film(ResultSet resultSet) throws SQLException {
+//        this(Integer.parseInt(resultSet.getString("id")), resultSet.getString("title"), Integer.parseInt(resultSet.getString("year")), resultSet.getString("director"), resultSet.getString("stars"), resultSet.getString("review"));
+//    }
 
     public int getId() {
         return id;

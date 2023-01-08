@@ -37,7 +37,7 @@ public class FilmQuery implements DatabaseQuery<Film> {
                     if (resultSet.getString("id").isEmpty()) {
                         break;
                     } else {
-                        films.add(new Film(resultSet));
+                        films.add(new Film(Integer.parseInt(resultSet.getString("id")), resultSet.getString("title"), Integer.parseInt(resultSet.getString("year")), resultSet.getString("director"), resultSet.getString("stars"), resultSet.getString("review")));
                     }
                 }
             }
@@ -82,7 +82,7 @@ public class FilmQuery implements DatabaseQuery<Film> {
             String output = String.format("Select of %d is successful", id);
             System.out.println(output);
             try {
-                return new Film(resultSet);
+                return new Film(Integer.parseInt(resultSet.getString("id")), resultSet.getString("title"), Integer.parseInt(resultSet.getString("year")), resultSet.getString("director"), resultSet.getString("stars"), resultSet.getString("review"));
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
