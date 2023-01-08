@@ -11,10 +11,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="Reworked how file is being read, JSON and XML serialise and deserialise implemented.">
+    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="Text Reader has a deserialise method now.">
+      <change afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/FormatType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/FormatUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/RequestUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/ValidationUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +58,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2JdkiEjBzsK5YzDfLyD7iBjYeSW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -85,7 +93,7 @@
       <recent name="C:\Users\ZTedd\IdeaProjects\enterpriseproject\enterprise-core\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="enterprise-core" />
@@ -204,7 +212,7 @@
       <workItem from="1672943990603" duration="5304000" />
       <workItem from="1673014320429" duration="6798000" />
       <workItem from="1673045544997" duration="13601000" />
-      <workItem from="1673093158421" duration="15554000" />
+      <workItem from="1673093158421" duration="33988000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -234,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673104717210</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Text Reader has a deserialise method now.">
+      <created>1673109032524</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673109032524</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +270,7 @@
     <MESSAGE value="Core and servlet complete." />
     <MESSAGE value="began work on api" />
     <MESSAGE value="Reworked how file is being read, JSON and XML serialise and deserialise implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked how file is being read, JSON and XML serialise and deserialise implemented." />
+    <MESSAGE value="Text Reader has a deserialise method now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Text Reader has a deserialise method now." />
   </component>
 </project>
