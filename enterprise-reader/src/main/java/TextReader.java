@@ -1,9 +1,8 @@
-package Utils;
-
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
-@Deprecated
+
 public class TextReader implements Reader {
 
     private static volatile TextReader instance = null;

@@ -1,8 +1,7 @@
-package Utils;
-
 import com.fasterxml.jackson.xml.XmlMapper;
+
 import java.io.IOException;
-@Deprecated
+
 public class XMLReader implements Reader {
     private static volatile XMLReader instance = null;
     private XMLReader(){}
