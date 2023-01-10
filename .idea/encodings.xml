@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/enterprise-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/enterprise-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/enterprise-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/enterprise-reader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/enterprise-reader/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/enterprise-restapi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/enterprise-restapi/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/enterprise-servlet/src/main/java" charset="UTF-8" />

@@ -1,8 +1,6 @@
-package Utils;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-@Deprecated
+
 public class JSONReader implements Reader {
     private static volatile JSONReader instance = null;
     private JSONReader(){}
