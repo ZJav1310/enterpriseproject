@@ -1,7 +1,6 @@
 package Connectors;
 
 import Models.DataSourceProp;
-import Models.DataSourceProperties;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,10 +9,6 @@ import java.sql.SQLException;
 public class JDBCConnector implements DataSourceConnector {
     private final DataSourceProp d;
     private Connection c;
-
-//    public JDBCConnector(DataSourceProperties d) {
-//        this.d = d;
-//    }
 
     public JDBCConnector(DataSourceProp d) {
         this.d = d;

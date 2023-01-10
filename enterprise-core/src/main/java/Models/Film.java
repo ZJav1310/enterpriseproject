@@ -1,9 +1,5 @@
 package Models;
 
-import java.sql.Array;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 public class Film {
@@ -32,10 +28,6 @@ public class Film {
         this(0, title, year, director, stars, review);
     }
 
-//    public Film(ResultSet resultSet) throws SQLException {
-//        this(Integer.parseInt(resultSet.getString("id")), resultSet.getString("title"), Integer.parseInt(resultSet.getString("year")), resultSet.getString("director"), resultSet.getString("stars"), resultSet.getString("review"));
-//    }
-
     public int getId() {
         return id;
     }
@@ -62,8 +54,6 @@ public class Film {
 
     @Override
     public String toString() {
-//        return "Film [id=" + id + ", title=" + title + ", year=" + year + ", director=" + director + ", stars=" + stars
-//                + ", review=" + review + "]";
         return "#" + id + "|" + title + "|" + year + "|" + director + "|" + stars
                 + "|" + review;
     }

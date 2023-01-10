@@ -19,9 +19,6 @@ public class DatabaseBuilder {
     private DataSourceConnector dataSourceConnector;
     private DataSourceProp dataSourceProp;
 
-    private String DATASOURCEPROPJSON = "C:\\Users\\ZTedd\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\DataSources.JSON";
-    private String SERVERCONFIGXML = "C:\\Users\\ZTedd\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\ServerConfig.xml";
-
     public DatabaseBuilder() throws ParserConfigurationException {
         setDataSourceProperties();
         setDataSourceConnector();
@@ -50,15 +47,14 @@ public class DatabaseBuilder {
      * and then to find the database with the name defined in the server config.
      * <p>
      * Once the database has been found, it will assign it to this.dataSourceProperties.
-     *
-     * @throws ParserConfigurationException
      */
 
     //Todo: need to figure out how to deal with the way it finds the files.
-    private void setDataSourceProperties() throws ParserConfigurationException {
+    private void setDataSourceProperties(){
         // parse the JSON file
         try {
-            List<DataSourceProp> dataSourcePropList = Arrays.asList(new JSONReader().deserialiseObject(Files.readString(Paths.get(this.DATASOURCEPROPJSON)), DataSourceProp[].class));
+            String DATASOURCEPROPJSON = "C:\\Users\\ZTedd\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\DataSources.JSON";
+            DataSourceProp[] dataSourcePropList = JSONReader.getInstance().deserialiseObject(Files.readString(Paths.get(DATASOURCEPROPJSON)), DataSourceProp[].class);
 
             for (DataSourceProp dataSourceProp : dataSourcePropList) {
                 System.out.println(dataSourceProp.getName());
@@ -87,7 +83,8 @@ public class DatabaseBuilder {
      */
     private ServerConfig getServerConfig() {
         try {
-            return new XMLReader().deserialiseObject(Files.readString(Paths.get(this.SERVERCONFIGXML)), ServerConfig.class);
+            String SERVERCONFIGXML = "C:\\Users\\ZTedd\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\ServerConfig.xml";
+            return XMLReader.getInstance().deserialiseObject(Files.readString(Paths.get(SERVERCONFIGXML)), ServerConfig.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
