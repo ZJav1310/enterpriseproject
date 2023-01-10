@@ -1,5 +1,8 @@
 package Models;
 
+/**
+ * Model for Data Source Properties. Data from the file (or wherever else) is mapped to this class.
+ */
 public class DataSourceProp {
     private String name;
     private String url;

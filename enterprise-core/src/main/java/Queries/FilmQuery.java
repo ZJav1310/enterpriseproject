@@ -28,23 +28,20 @@ public class FilmQuery implements DatabaseQuery<Film> {
         final String select = "SELECT * FROM films";
         Collection<Film> films = new ArrayList<>();
 
-        try {
-            System.out.println("Preparing Select Statement.");
+        System.out.println("Preparing Select Statement.");
+        try (ResultSet resultSet = new StatementBuilder(select, d.getConnection()).prepareStatement().executeQuery()) {
 
-            try (ResultSet resultSet = new StatementBuilder(select, d.getConnection()).prepareStatement().executeQuery()) {
-
-                while (resultSet.next()) {
-                    if (resultSet.getString("id").isEmpty()) {
-                        break;
-                    } else {
-                        films.add(new Film(Integer.parseInt(resultSet.getString("id")), resultSet.getString("title"), Integer.parseInt(resultSet.getString("year")), resultSet.getString("director"), resultSet.getString("stars"), resultSet.getString("review")));
-                    }
-                }
+            while (resultSet.next()) {
+                films.add(new Film(resultSet.getInt("id"),
+                        resultSet.getString("title"),
+                        resultSet.getInt("year"),
+                        resultSet.getString("director"),
+                        resultSet.getString("stars"),
+                        resultSet.getString("review")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return films;
     }
 
@@ -61,33 +58,25 @@ public class FilmQuery implements DatabaseQuery<Film> {
      */
     public Film getById(int id) {
         final String select = "SELECT * FROM films WHERE id=?";
-        ResultSet resultSet = null;
 
-        try {
-            List<String> parameters = List.of(Integer.toString(id));
-            System.out.println("Preparing Select Statement.");
-
+        System.out.println("Preparing Select Statement.");
+        try (ResultSet resultSet = new StatementBuilder(select, List.of(id), d.getConnection()).prepareStatement().executeQuery()) {
             System.out.println("Finding.");
-            resultSet = new StatementBuilder(select, parameters, d.getConnection()).prepareStatement().executeQuery();
 
             if (resultSet.next()) {
-                System.out.println("Found.");
+                System.out.println(String.format("Select of %d is successful", id));
+
+                return new Film(resultSet.getInt("id"),
+                        resultSet.getString("title"),
+                        resultSet.getInt("year"),
+                        resultSet.getString("director"),
+                        resultSet.getString("stars"),
+                        resultSet.getString("review"));
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        if (resultSet != null) {
-            String output = String.format("Select of %d is successful", id);
-            System.out.println(output);
-            try {
-                return new Film(Integer.parseInt(resultSet.getString("id")), resultSet.getString("title"), Integer.parseInt(resultSet.getString("year")), resultSet.getString("director"), resultSet.getString("stars"), resultSet.getString("review"));
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
         return new Film();
     }
 
@@ -105,29 +94,24 @@ public class FilmQuery implements DatabaseQuery<Film> {
         final String insert = "INSERT INTO films (Title, Year, Director, Review, Stars) VALUES (?, ?, ?, ?, ?)";
         int rowsAffected = 0;
 
+        List<Object> parameters = Arrays.asList(
+                f.getTitle(),
+                f.getYear(),
+                f.getDirector(),
+                f.getReview(),
+                f.getStars()
+        );
+        System.out.println("Preparing Insert Statement.");
         try {
-            List<String> parameters = Arrays.asList(
-                    f.getTitle(),
-                    String.valueOf(f.getYear()),
-                    f.getDirector(),
-                    f.getReview(),
-                    f.getStars()
-            );
-
-            System.out.println("Preparing Insert Statement.");
             System.out.println("Inserting.");
-
             rowsAffected = new StatementBuilder(insert, parameters, d.getConnection()).prepareStatement().executeUpdate();
 
             if (rowsAffected > 0) {
-                String output = String.format("Insert of %s is successful", f.getTitle());
-                System.out.println(output);
+                System.out.println(String.format("Insert of %s is successful", f.getTitle()));
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return rowsAffected;
     }
 
@@ -144,33 +128,29 @@ public class FilmQuery implements DatabaseQuery<Film> {
      */
     public int update(Film f) {
         final String update = "UPDATE films SET title=?, year=?, director=?, stars=?, review=? WHERE id=?";
-        List<String> parameters = new ArrayList<>(
+        List<Object> parameters = new ArrayList<>(
                 List.of(f.getTitle(),
-                        Integer.toString(f.getYear()),
+                        f.getYear(),
                         f.getDirector(),
                         f.getStars(),
                         f.getReview(),
-                        Integer.toString(f.getId()))
+                        f.getId())
         );
 
         int result = 0;
-
-        try {
-            if (getById(f.getId()) != null) {
-                System.out.println("Preparing Update Statement.");
+        if (getById(f.getId()) != null) {
+            System.out.println("Preparing Update Statement.");
+            try {
                 System.out.println("Executing Update.");
-
                 result = new StatementBuilder(update, parameters, d.getConnection()).prepareStatement().executeUpdate();
 
                 if (result > 0) {
                     System.out.println("Completed Successfully.");
                 }
-
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
-
         return result;
     }
 
@@ -186,48 +166,41 @@ public class FilmQuery implements DatabaseQuery<Film> {
      */
     public int delete(int i) {
         final String delete = "DELETE FROM films WHERE id=?";
-        List<String> parameters = new ArrayList<>(List.of(Integer.toString(i)));
         int result = 0;
 
-        try {
-            if (getById(i) != null) {
-                System.out.println("Preparing Delete Statement. Using ID to find.");
+        if (getById(i) != null) {
+            System.out.println("Preparing Delete Statement. Using ID to find.");
+            try {
                 System.out.println("Executing Delete.");
-
-                result = new StatementBuilder(delete, parameters, d.getConnection()).prepareStatement().executeUpdate();
-
+                result = new StatementBuilder(delete, List.of(i), d.getConnection()).prepareStatement().executeUpdate();
                 if (result > 0) {
                     System.out.println("Completed Successfully.");
                     return result;
                 }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
-
         return result;
     }
 
     public int delete(Film f) {
         final String delete = "DELETE FROM films WHERE id=?";
-        List<String> parameters = new ArrayList<>(List.of(Integer.toString(f.getId())));
+
         int result = 0;
-
-        try {
-            if (getById(f.getId()) != null) {
-                System.out.println("Preparing Delete Statement. Using Film Objects ID.");
+        if (getById(f.getId()) != null) {
+            System.out.println("Preparing Delete Statement. Using Film Objects ID.");
+            try {
                 System.out.println("Executing Delete.");
-
-                result = new StatementBuilder(delete, parameters, d.getConnection()).prepareStatement().executeUpdate();
+                result = new StatementBuilder(delete, List.of(f.getId()), d.getConnection()).prepareStatement().executeUpdate();
 
                 if (result > 0) {
                     System.out.println("Completed Successfully.");
                 }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
-
         return result;
     }
 

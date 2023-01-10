@@ -1,7 +1,5 @@
 package Models;
 
-import com.fasterxml.jackson.xml.annotate.JacksonXmlProperty;
-import com.fasterxml.jackson.xml.annotate.JacksonXmlRootElement;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 @Deprecated

@@ -6,9 +6,8 @@ import Queries.DatabaseQuery;
 import Queries.FilmQuery;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.sql.SQLException;
 import java.util.Collection;
-import java.util.function.Predicate;
+
 
 /**
  * This class purpose is to be the bridge between this back end and whatever interface to exist.
@@ -16,7 +15,7 @@ import java.util.function.Predicate;
 public class Commands {
     private final DatabaseQuery<Film> filmQuery;
 
-    public Commands() throws ParserConfigurationException, SQLException {
+    public Commands() throws ParserConfigurationException {
         filmQuery = new FilmQuery(new DatabaseBuilder().getDataSourceConnector());
     }
 

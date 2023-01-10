@@ -8,12 +8,12 @@ import java.util.Collection;
 
 public class StatementBuilder {
 
-    private final Connection c; // TODO
+    private final Connection c;
     private final String statement;
-    private final Collection<String> parameters;
+    private final Collection<Object> parameters;
     private PreparedStatement p;
 
-    public StatementBuilder(String statement, Collection<String> parameters, Connection c) {
+    public StatementBuilder(String statement, Collection<Object> parameters, Connection c) {
         System.out.println("Statement Builder Created.");
         this.c = c;
         this.statement = statement;
@@ -24,24 +24,39 @@ public class StatementBuilder {
         this(statement, new ArrayList<>(), c);
     }
 
+//    public PreparedStatement prepareStatement() {
+//
+//        int i = 1;
+//
+//        try {
+//            p = c.prepareStatement(this.statement);
+//
+//            if (!this.parameters.isEmpty()) {
+//                for (String item : this.parameters) {
+//                    p.setString(i, item);
+//                    i++;
+//                }
+//            }
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return p;
+//    }
+
     public PreparedStatement prepareStatement() {
-
         int i = 1;
-
         try {
             p = c.prepareStatement(this.statement);
-
             if (!this.parameters.isEmpty()) {
-                for (String item : this.parameters) {
-                    p.setString(i, item);
-                    i++;
+                for (Object item : this.parameters) {
+                    p.setObject(i++, item);
                 }
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return p;
     }
 
