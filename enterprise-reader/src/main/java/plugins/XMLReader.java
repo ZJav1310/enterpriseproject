@@ -1,3 +1,5 @@
+package plugins;
+
 import com.fasterxml.jackson.xml.XmlMapper;
 
 import java.io.IOException;

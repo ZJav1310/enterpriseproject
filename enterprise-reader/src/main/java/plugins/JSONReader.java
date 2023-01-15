@@ -1,5 +1,8 @@
+package plugins;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 public class JSONReader implements Reader {
     private static volatile JSONReader instance = null;

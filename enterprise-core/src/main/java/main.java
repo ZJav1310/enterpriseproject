@@ -8,6 +8,8 @@ import Utils.XMLReader;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
+import static org.reflections.Reflections.log;
+
 public class main {
     public static void main(String args[]) throws IOException {
         XMLReader reader;
@@ -44,5 +46,9 @@ public class main {
         Film filmC = textReader.deserialiseObject(text, Film.class);
 
         System.out.println(filmC.toString());
+
+        log.info();
+
+
     }
 }

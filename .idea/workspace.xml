@@ -15,12 +15,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="Before the great purge (Plugin architecture for readers soon tm)">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-reader/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/JSONReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/TextReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/XMLReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-data/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/DatabaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/DatabaseQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/JSONReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/TextReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/UpdateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/WEB-INF/Components/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/WEB-INF/Components/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +51,10 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Microsoft/jdk-11.0.12.7-hotspot/lib/src.zip!/java.base/java/util/concurrent/ThreadPoolExecutor.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/8.0.31/mysql-connector-j-8.0.31-sources.jar!/com/mysql/cj/jdbc/AbandonedConnectionCleanupThread.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -70,31 +84,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/ZTedd/IdeaProjects/enterpriseproject/enterprise-reader/src/main/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ZTedd/Downloads/Dracula_Theme-1.12.4.zip&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ZTedd\IdeaProjects\enterpriseproject\enterprise-reader\src\main\java" />
       <recent name="C:\Users\ZTedd\IdeaProjects\enterpriseproject\enterprise-core\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="enterprise-reader" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="enterprise-core" />
@@ -108,6 +131,11 @@
         <artifact name="enterprise-api:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/enterprise_api_war_exploded" />
+          </settings>
+        </artifact>
+        <artifact name="enterprise-servlet:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/enterprise_servlet_war_exploded" />
           </settings>
         </artifact>
       </deployment>
@@ -191,9 +219,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.main" />
+      <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +251,14 @@
       <workItem from="1673195172827" duration="9566000" />
       <workItem from="1673260619795" duration="595000" />
       <workItem from="1673269426727" duration="648000" />
-      <workItem from="1673298917800" duration="16813000" />
+      <workItem from="1673298917800" duration="17123000" />
+      <workItem from="1673364703750" duration="10069000" />
+      <workItem from="1673391803358" duration="942000" />
+      <workItem from="1673392760790" duration="198000" />
+      <workItem from="1673392970896" duration="255000" />
+      <workItem from="1673393239139" duration="656000" />
+      <workItem from="1673529618023" duration="2748000" />
+      <workItem from="1673795957977" duration="2878000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -268,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673317875976</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Before the great purge (Plugin architecture for readers soon tm)">
+      <created>1673318337701</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673318337701</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

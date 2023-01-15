@@ -1,3 +1,5 @@
+package plugins;
+
 public interface Reader {
     String serialiseObject(Object input);
     <T> T deserialiseObject(String inputString, Class<T> tClass);
