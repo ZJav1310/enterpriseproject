@@ -64,7 +64,7 @@ public class FilmQuery implements DatabaseQuery<Film> {
             System.out.println("Finding.");
 
             if (resultSet.next()) {
-                System.out.println(String.format("Select of %d is successful", id));
+                System.out.printf("Select of %d is successful%n", id);
 
                 return new Film(resultSet.getInt("id"),
                         resultSet.getString("title"),
@@ -107,7 +107,7 @@ public class FilmQuery implements DatabaseQuery<Film> {
             rowsAffected = new StatementBuilder(insert, parameters, d.getConnection()).prepareStatement().executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println(String.format("Insert of %s is successful", f.getTitle()));
+                System.out.printf("Insert of %s is successful%n", f.getTitle());
             }
         } catch (SQLException e) {
             e.printStackTrace();

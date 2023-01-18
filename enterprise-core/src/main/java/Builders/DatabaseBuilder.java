@@ -9,11 +9,8 @@ import Utils.XMLReader;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 public class DatabaseBuilder {
@@ -51,7 +48,7 @@ public class DatabaseBuilder {
      */
 
     // Example: C:\Users\ZTedd\ZJ-ENTERPRISE-CONFIG
-    private void setDataSourceProperties(){
+    private void setDataSourceProperties() {
         // parse the JSON file
         try {
 //            String DATASOURCEPROPJSON = System.getProperty("user.home") + "\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\DataSources.JSON";
