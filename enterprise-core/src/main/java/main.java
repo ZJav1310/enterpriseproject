@@ -11,7 +11,7 @@ import java.io.IOException;
 import static org.reflections.Reflections.log;
 
 public class main {
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         XMLReader reader;
         String PATH = null,
                 JsonString,
@@ -46,9 +46,6 @@ public class main {
         Film filmC = textReader.deserialiseObject(text, Film.class);
 
         System.out.println(filmC.toString());
-
-        log.info();
-
 
     }
 }

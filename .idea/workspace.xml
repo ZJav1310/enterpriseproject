@@ -2,6 +2,7 @@
 <project version="4">
   <component name="AnalysisUIOptions">
     <option name="GROUP_BY_SEVERITY" value="true" />
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
   </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
@@ -14,24 +15,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="Before the great purge (Plugin architecture for readers soon tm)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-data/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="Midway point.">
+      <change afterPath="$PROJECT_DIR$/enterprise-data/src/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-api" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/DataRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/DataRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/FormatType.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/FormatType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/DatabaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/DatabaseQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/JSONReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/TextReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-servlet" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/UpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/WEB-INF/Components/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/WEB-INF/Components/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,26 +78,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ZTedd/Downloads/Dracula_Theme-1.12.4.zip&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/ZTedd/ZJ-ENTERPRISE-CONFIG",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.13404828",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ZTedd\IdeaProjects\enterpriseproject\enterprise-reader\src\main\java" />
@@ -141,6 +135,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="a686220b-00dd-437e-b85e-ba6e6f00dba2" />
+        <option name="HTTP_PORT" value="8081" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -258,7 +253,11 @@
       <workItem from="1673392970896" duration="255000" />
       <workItem from="1673393239139" duration="656000" />
       <workItem from="1673529618023" duration="2748000" />
-      <workItem from="1673795957977" duration="2878000" />
+      <workItem from="1673795957977" duration="5998000" />
+      <workItem from="1673824197909" duration="3040000" />
+      <workItem from="1674075136862" duration="200000" />
+      <workItem from="1674075351167" duration="84000" />
+      <workItem from="1674075448463" duration="5726000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -316,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673318337701</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Midway point.">
+      <created>1673801212961</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673801212961</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +346,7 @@
     <MESSAGE value="Text Reader has a deserialise method now." />
     <MESSAGE value="API Utility." />
     <MESSAGE value="Before the great purge (Plugin architecture for readers soon tm)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before the great purge (Plugin architecture for readers soon tm)" />
+    <MESSAGE value="Midway point." />
+    <option name="LAST_COMMIT_MESSAGE" value="Midway point." />
   </component>
 </project>

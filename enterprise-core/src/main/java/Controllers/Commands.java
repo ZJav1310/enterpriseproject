@@ -6,6 +6,7 @@ import Queries.DatabaseQuery;
 import Queries.FilmQuery;
 
 import javax.xml.parsers.ParserConfigurationException;
+import java.sql.SQLException;
 import java.util.Collection;
 
 
@@ -77,7 +78,11 @@ public class Commands {
      * @return Film found to have the id given.
      */
     public Film getById(int id) {
-        return filmQuery.getById(id);
+        try {
+            return filmQuery.getById(id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public Collection<Film> searchByTitle(String title) {
