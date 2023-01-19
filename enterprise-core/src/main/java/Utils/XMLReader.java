@@ -1,6 +1,8 @@
 package Utils;
 
 import com.fasterxml.jackson.xml.XmlMapper;
+import com.thoughtworks.xstream.XStream;
+
 import java.io.IOException;
 @Deprecated
 public class XMLReader implements Reader {
@@ -17,12 +19,12 @@ public class XMLReader implements Reader {
         return instance;
     }
     // serialize object to XML
-    public String serialiseObject(Object input){
-        try {
-            return new XmlMapper().writeValueAsString(input);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public <T> String serialiseObject(T input){
+        //            XmlMapper xmlMapper = new XmlMapper();
+//            return new XmlMapper().writeValueAsString(input);
+        XStream xstream = new XStream();
+        return xstream.toXML(input);
+
     }
 
     public <T> T deserialiseObject(String XMLString, Class<T> tClass){

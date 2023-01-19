@@ -19,13 +19,17 @@ public class TextReader implements Reader {
         return instance;
     }
     @Override
-    public String serialiseObject(Object input) {
-        try {
-            return input.getClass().getDeclaredMethod("toString").invoke(input).toString();
+    public <T> String serialiseObject(T input) {
 
-        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-            throw new RuntimeException(e);
+        // Need to check if the input is in an array etc
+        if(input.getClass().isArray()){
+            return Arrays.toString((Object[]) input);
         }
+        if(input instanceof List){
+            return Arrays.toString(((List) input).toArray());
+        }
+        return input.toString();
+
     }
 
     @Override
