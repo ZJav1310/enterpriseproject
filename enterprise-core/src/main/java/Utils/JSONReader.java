@@ -17,7 +17,7 @@ public class JSONReader implements Reader {
         return instance;
     }
     // serialize object to JSON
-    public String serialiseObject(Object input) {
+    public <T> String serialiseObject(T input) {
         try {
             return new ObjectMapper().writeValueAsString(input);
         } catch (JsonProcessingException e) {
