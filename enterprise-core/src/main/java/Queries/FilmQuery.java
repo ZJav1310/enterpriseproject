@@ -27,7 +27,6 @@ public class FilmQuery implements DatabaseQuery<Film> {
     public Collection<Film> getAll() {
         final String select = "SELECT * FROM films";
         Collection<Film> films = new ArrayList<>();
-
         System.out.println("Preparing Select Statement.");
         try (ResultSet resultSet = new StatementBuilder(select, d.getConnection()).prepareStatement().executeQuery()) {
 
