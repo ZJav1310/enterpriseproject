@@ -8,6 +8,14 @@
     "schema": "universityenterprise"
   },
   {
+    "name": "GoogleDB",
+    "user": "root",
+    "pass": "beesting1",
+    "url": "35.246.106.174",
+    "port": 3306,
+    "schema": "universityenterprise"
+  },
+  {
     "name": "Mudfoot",
     "user": "javaidzo",
     "pass": "cRegholp4",

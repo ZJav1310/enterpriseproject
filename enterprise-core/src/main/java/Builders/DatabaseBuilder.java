@@ -37,6 +37,9 @@ public class DatabaseBuilder {
         if (Objects.equals(dataSourceProp.getName(), "Mudfoot")) {
             this.dataSourceConnector = new JDBCConnector(dataSourceProp);
         }
+        if (Objects.equals(dataSourceProp.getName(), "GoogleDB")) {
+            this.dataSourceConnector = new JDBCConnector(dataSourceProp);
+        }
     }
 
     /**
