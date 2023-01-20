@@ -16,7 +16,6 @@ import java.util.Objects;
 public class DatabaseBuilder {
     private DataSourceConnector dataSourceConnector;
     private DataSourceProp dataSourceProp;
-
     public DatabaseBuilder() throws ParserConfigurationException {
         setDataSourceProperties();
         setDataSourceConnector();
@@ -54,18 +53,23 @@ public class DatabaseBuilder {
     private void setDataSourceProperties() {
         // parse the JSON file
         try {
+            ServerConfig sc = this.setServerConfig();
+
             String DATASOURCEPROPJSON = System.getProperty("user.home") + "\\ZJ-ENTERPRISE-CONFIG\\DataSources.JSON";
+            System.out.println("Trying to get file, expected location: " + DATASOURCEPROPJSON);
             DataSourceProp[] dataSourcePropList = JSONReader.getInstance().deserialiseObject(Files.readString(Paths.get(DATASOURCEPROPJSON)), DataSourceProp[].class);
 
             for (DataSourceProp dataSourceProp : dataSourcePropList) {
-                System.out.println(dataSourceProp.getName());
-
-                if (Objects.equals(dataSourceProp.getName(), getServerConfig().getName())) {
+                System.out.println("Reading: " + dataSourceProp.getName());
+                if (Objects.equals(dataSourceProp.getName(), sc.getName())) {
+                    System.out.println("Found requested properties of " + dataSourceProp.getName() + " from DataSources.json...setting now.");
                     this.dataSourceProp = dataSourceProp;
+                    break;
                 }
             }
 
         } catch (IOException e) {
+            System.err.println("Database properties could not be found.");
             throw new RuntimeException(e);
         }
     }
@@ -80,9 +84,20 @@ public class DatabaseBuilder {
      *
      * @return Server Config object
      */
-    private ServerConfig getServerConfig() {
+//    private ServerConfig getServerConfig() {
+//        try {
+//            String SERVERCONFIGXML = System.getProperty("user.home") + "\\ZJ-ENTERPRISE-CONFIG\\ServerConfig.xml";
+//            System.out.println("Trying to get file, expected location: " + SERVERCONFIGXML);
+//            return XMLReader.getInstance().deserialiseObject(Files.readString(Paths.get(SERVERCONFIGXML)), ServerConfig.class);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+
+    private ServerConfig setServerConfig() {
         try {
             String SERVERCONFIGXML = System.getProperty("user.home") + "\\ZJ-ENTERPRISE-CONFIG\\ServerConfig.xml";
+            System.out.println("Trying to get file, expected location: " + SERVERCONFIGXML);
             return XMLReader.getInstance().deserialiseObject(Files.readString(Paths.get(SERVERCONFIGXML)), ServerConfig.class);
         } catch (IOException e) {
             throw new RuntimeException(e);

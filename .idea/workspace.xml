@@ -14,14 +14,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="exports XML">
+    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="before cloud.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/DataSources.JSON" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/DataSources.JSON" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/ServerConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/ServerConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-servlet" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +96,7 @@
       <recent name="C:\Users\ZTedd\IdeaProjects\enterpriseproject\enterprise-core\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
+  <component name="RunManager" selected="Application.main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="enterprise-reader" />
@@ -253,7 +248,7 @@
       <workItem from="1674220351631" duration="44000" />
       <workItem from="1674220414120" duration="764000" />
       <workItem from="1674221414755" duration="616000" />
-      <workItem from="1674235738392" duration="731000" />
+      <workItem from="1674235738392" duration="7383000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -339,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674182829929</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="before cloud.">
+      <created>1674237007695</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674237007696</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +369,8 @@
     <MESSAGE value="Before API changes" />
     <MESSAGE value="XMLMAPPER IS BAD" />
     <MESSAGE value="exports XML" />
-    <option name="LAST_COMMIT_MESSAGE" value="exports XML" />
+    <MESSAGE value="before cloud." />
+    <option name="LAST_COMMIT_MESSAGE" value="before cloud." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
