@@ -51,7 +51,6 @@ public class DatabaseBuilder {
     private void setDataSourceProperties() {
         // parse the JSON file
         try {
-//            String DATASOURCEPROPJSON = System.getProperty("user.home") + "\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\DataSources.JSON";
             String DATASOURCEPROPJSON = System.getProperty("user.home") + "\\ZJ-ENTERPRISE-CONFIG\\DataSources.JSON";
             DataSourceProp[] dataSourcePropList = JSONReader.getInstance().deserialiseObject(Files.readString(Paths.get(DATASOURCEPROPJSON)), DataSourceProp[].class);
 
@@ -80,7 +79,6 @@ public class DatabaseBuilder {
      */
     private ServerConfig getServerConfig() {
         try {
-//            String SERVERCONFIGXML = "C:\\Users\\ZTedd\\IdeaProjects\\enterpriseproject\\enterprise-core\\src\\main\\java\\Configuration\\ServerConfig.xml";
             String SERVERCONFIGXML = System.getProperty("user.home") + "\\ZJ-ENTERPRISE-CONFIG\\ServerConfig.xml";
             return XMLReader.getInstance().deserialiseObject(Files.readString(Paths.get(SERVERCONFIGXML)), ServerConfig.class);
         } catch (IOException e) {

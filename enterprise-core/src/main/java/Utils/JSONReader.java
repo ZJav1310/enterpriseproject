@@ -2,20 +2,25 @@ package Utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-@Deprecated
+
+
 public class JSONReader implements Reader {
     private static volatile JSONReader instance = null;
-    private JSONReader(){}
-    public static JSONReader getInstance(){
-        if(instance == null){
-            synchronized (JSONReader.class){
-                if(instance == null){
+
+    private JSONReader() {
+    }
+
+    public static JSONReader getInstance() {
+        if (instance == null) {
+            synchronized (JSONReader.class) {
+                if (instance == null) {
                     instance = new JSONReader();
                 }
             }
         }
         return instance;
     }
+
     // serialize object to JSON
     public <T> String serialiseObject(T input) {
         try {
@@ -33,14 +38,16 @@ public class JSONReader implements Reader {
             throw new RuntimeException(e);
         }
     }
-    public <T> boolean isValidInput(String jsonString, Class<T> tClass){
-        try{
-            if(deserialiseObject(jsonString, tClass) != null)
+
+    public <T> boolean isValidInput(String jsonString, Class<T> tClass) {
+        try {
+            if (deserialiseObject(jsonString, tClass) != null)
                 return true;
         } catch (Exception ignored) {
         }
         return false;
     }
+
     public String getAcceptedMimeType() {
         return "application/json";
     }

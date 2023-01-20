@@ -14,14 +14,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="Before API changes">
+    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="XMLMAPPER IS BAD">
+      <change afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/HomeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/DataRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/DataRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/FormatType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/APIControllers/FormatterFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/StatementBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/StatementBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/ServerConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Configuration/ServerConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/JDBCConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/JDBCConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/Film.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/JSONReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/DeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/InsertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/InsertServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/UpdateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/controllers/CommandsBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/controllers/CommandsBridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,26 +88,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/ZTedd/ZJ-ENTERPRISE-CONFIG",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.13404828",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ZTedd/ZJ-ENTERPRISE-CONFIG&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.13404828&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ZTedd\IdeaProjects\enterpriseproject\enterprise-reader\src\main\java" />
@@ -247,7 +261,8 @@
       <workItem from="1673824197909" duration="3040000" />
       <workItem from="1674075136862" duration="200000" />
       <workItem from="1674075351167" duration="84000" />
-      <workItem from="1674075448463" duration="22330000" />
+      <workItem from="1674075448463" duration="22693000" />
+      <workItem from="1674126574690" duration="13888000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -319,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674083376417</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="XMLMAPPER IS BAD">
+      <created>1674100176707</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674100176707</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +367,7 @@
     <MESSAGE value="Before the great purge (Plugin architecture for readers soon tm)" />
     <MESSAGE value="Midway point." />
     <MESSAGE value="Before API changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before API changes" />
+    <MESSAGE value="XMLMAPPER IS BAD" />
+    <option name="LAST_COMMIT_MESSAGE" value="XMLMAPPER IS BAD" />
   </component>
 </project>
