@@ -24,27 +24,6 @@ public class StatementBuilder {
         this(statement, new ArrayList<>(), c);
     }
 
-//    public PreparedStatement prepareStatement() {
-//
-//        int i = 1;
-//
-//        try {
-//            p = c.prepareStatement(this.statement);
-//
-//            if (!this.parameters.isEmpty()) {
-//                for (String item : this.parameters) {
-//                    p.setString(i, item);
-//                    i++;
-//                }
-//            }
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return p;
-//    }
-
     public PreparedStatement prepareStatement() {
         int i = 1;
         try {

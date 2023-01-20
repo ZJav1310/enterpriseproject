@@ -59,8 +59,8 @@ public class Film {
     }
 
     // id|title|year|director|stars|reviews
-    public Film(List<String> stringList){
-        this(Integer.parseInt(stringList.get(0)), stringList.get(1), Integer.parseInt(stringList.get(2)), stringList.get(3),stringList.get(4), stringList.get(5));
+    public Film(List<String> stringList) {
+        this(Integer.parseInt(stringList.get(0)), stringList.get(1), Integer.parseInt(stringList.get(2)), stringList.get(3), stringList.get(4), stringList.get(5));
     }
 
 }

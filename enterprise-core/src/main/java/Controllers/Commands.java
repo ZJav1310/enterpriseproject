@@ -50,6 +50,7 @@ public class Commands {
     public int updateFilm(int id, String title, int year, String director, String stars, String review) {
         return filmQuery.update(new Film(id, title, year, director, stars, review));
     }
+
     public int updateFilm(Film f) {
         return filmQuery.update(f);
     }

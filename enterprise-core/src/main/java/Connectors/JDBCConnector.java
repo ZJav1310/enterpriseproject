@@ -15,12 +15,9 @@ public class JDBCConnector implements DataSourceConnector {
     }
 
     private void initialiseConnection() {
-        try
-        {
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-        }
-        catch(ClassNotFoundException e)
-        {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
 
