@@ -11,7 +11,8 @@ import java.util.Collection;
 
 
 /**
- * This class purpose is to be the bridge between this back end and whatever interface to exist.
+ * This class purpose is to be the abstraction between this backend and whatever interface to exist.
+ * See FilmQuery.Class for more details.
  */
 public class Commands {
     private final DatabaseQuery<Film> filmQuery;

@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/enterprise-api" />
     <file type="web" url="file://$PROJECT_DIR$/enterprise-servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/enterprise-soap" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

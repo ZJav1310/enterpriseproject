@@ -12,8 +12,6 @@
         <module>enterprise-core</module>
         <module>enterprise-servlet</module>
         <module>enterprise-api</module>
-        <module>enterprise-reader</module>
-        <module>enterprise-data</module>
     </modules>
 
     <properties>

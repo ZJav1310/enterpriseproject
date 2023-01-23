@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="enterprise-core">
+    <output-path>$PROJECT_DIR$/out/artifacts/enterprise_core</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="enterprise-core" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/enterprise-core/src/main/webapp/WEB-INF/appengine-web.xml" />
+      </element>
+    </root>
+  </artifact>
+</component>
