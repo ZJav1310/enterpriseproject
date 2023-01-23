@@ -7,16 +7,40 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="enterprise-api:war exploded" />
-      <artifact name="enterprise-servlet:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="before cloud.">
+    <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="after cloud">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/enterprise_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/enterprise_core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-api/src/main/webapp/WEB-INF/appengine-web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/webapp/WEB-INF/appengine-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/StatementBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/StatementBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-data/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-data/src/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/JSONReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/Reader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/TextReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/XMLReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/controllers/CommandsBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/controllers/CommandsBridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +76,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="workspaceImportEnabled" value="true" />
@@ -71,22 +100,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "zjav1310@gmail.com",
+    "ACTIVE_CLOUD_PROJECT_ID": "enterpriseproject-375313",
+    "ACTIVE_CLOUD_PROJECT_NAME": "enterpriseProject",
+    "ACTIVE_CLOUD_PROJECT_NUMBER": "445481889081",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20230120_0008",
+    "com.google.cloudcode.ide_session_index": "20230122_0021",
     "jdk.selected.JAVA_MODULE": "11",
     "last_opened_file_path": "C:/Users/ZTedd/ZJ-ENTERPRISE-CONFIG",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.13404828",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.21143474",
+    "project.structure.side.proportion": "0.24453281",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -96,22 +130,81 @@
       <recent name="C:\Users\ZTedd\IdeaProjects\enterpriseproject\enterprise-core\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="enterprise-reader" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MavenRunConfiguration" />
+        <option value="gcp-app-engine-local-run" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
+    <configuration name="Cloud Run: Deploy" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;zjav1310@gmail.com&quot;,&quot;projectId&quot;:&quot;enterpriseproject-375313&quot;,&quot;projectName&quot;:&quot;enterpriseProject&quot;,&quot;projectNumber&quot;:445481889081}" imageBuilder="{&quot;name&quot;:&quot;Buildpacks&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;pom.xml&quot;,&quot;builder&quot;:&quot;gcr.io/buildpacks/builder:v1&quot;}}" gcbSettings="{}">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="buildEnvironment" value="Local" />
+      <option name="buildpacksEnv" />
+      <option name="cloudSqlConnections" />
+      <option name="concurrency" value="80" />
+      <option name="cpuAllocated" value="1" />
+      <option name="customCpuAllocated" />
+      <option name="dockerBuildArgs" />
+      <option name="dockerTarget" />
+      <option name="environmentVariables" />
+      <option name="gkeClusterLocation" />
+      <option name="gkeClusterName" />
+      <option name="gkeClusterNamespace" value="default" />
+      <option name="gkeConnectivity" value="EXTERNAL" />
+      <option name="imagePath" value="gcr.io/enterpriseproject-375313/enterpriseproject" />
+      <option name="loadingAvailableBuilders" value="false" />
+      <option name="managedAuthentication" value="ALLOW_UNAUTHENTICATED" />
+      <option name="managedRegion" value="us-central1" />
+      <option name="maxInstances" />
+      <option name="memoryAllocated" value="MIB_256" />
+      <option name="minInstances" />
+      <option name="platform" value="FULLY_MANAGED" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="serviceAccount" />
+      <option name="serviceName" value="enterpriseproject" />
+      <option name="timeout" value="300" />
+      <option name="vpcConnector" />
+      <method v="2" />
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
-      <module name="enterprise-core" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Cloud Run: Run Locally" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudRunDevelopConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" imageBuilder="{&quot;name&quot;:&quot;Buildpacks&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;pom.xml&quot;,&quot;builder&quot;:&quot;gcr.io/buildpacks/builder:v1&quot;}}">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="buildpacksEnv" />
+      <option name="cloudSqlConnections">
+        <list />
+      </option>
+      <option name="cpuAllocated" value="NO_LIMIT" />
+      <option name="dockerBuildArgs" />
+      <option name="dockerTarget" value="" />
+      <option name="environmentVariables" />
+      <option name="loadingAvailableBuilders" value="false" />
+      <option name="mappings">
+        <list />
+      </option>
+      <option name="memoryAllocated" value="MIB_256" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="serviceAccount" value="" />
+      <option name="serviceName" value="enterpriseproject" />
+      <option name="skaffoldWatchMode" value="ON_DEMAND" />
+      <method v="2" />
     </configuration>
-    <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Google Cloud Debug" type="GCPDebug" factoryName="GCPDebug">
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="enterprise-api:war exploded">
@@ -121,8 +214,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="a686220b-00dd-437e-b85e-ba6e6f00dba2" />
-        <option name="HTTP_PORT" value="8081" />
+        <option name="BASE_DIRECTORY_NAME" value="b140f2c8-dd58-4487-bf3a-9a2162d50920" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -130,7 +222,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50798" />
+        <option name="DEBUG_PORT" value="50703" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -195,22 +287,110 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="enterprise-servlet:war exploded" />
           <artifact name="enterprise-api:war exploded" />
         </option>
       </method>
     </configuration>
+    <configuration name="Google App Engine Deployment" type="gcp-app-engine-deploy" factoryName="Google App Engine Deployment">
+      <method v="2" />
+    </configuration>
+    <configuration name="Google App Engine Standard Local Server" type="gcp-app-engine-local-run" factoryName="Local" APPLICATION_SERVER_NAME="Google App Engine Standard Local Server" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <server-settings>
+        <artifact>enterprise-api:war exploded</artifact>
+      </server-settings>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59989" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="enterprise-api:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Develop on Kubernetes" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="buildEnvironment" value="Local" />
+      <option name="cleanupDeployments" value="true" />
+      <option name="deployToCurrentContext" value="true" />
+      <option name="deployToMinikube" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" />
+      <option name="kubernetesContext" />
+      <option name="mappings">
+        <list />
+      </option>
+      <option name="moduleDeploymentType" value="DEPLOY_EVERYTHING" />
+      <option name="projectPathOnTarget" />
+      <option name="resourceDeletionTimeoutMins" value="2" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold.yaml" />
+      <option name="skaffoldModules">
+        <list />
+      </option>
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" />
+      <option name="skaffoldWatchMode" value="ON_DEMAND" />
+      <option name="statusCheck" value="true" />
+      <option name="verbosity" value="WARN" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.main" />
+      <item itemvalue="Cloud Code: Cloud Run.Cloud Run: Deploy" />
+      <item itemvalue="Cloud Code: Cloud Run.Cloud Run: Run Locally" />
+      <item itemvalue="Cloud Code: Kubernetes.Develop on Kubernetes" />
+      <item itemvalue="Google App Engine Deployment.Google App Engine Deployment" />
+      <item itemvalue="Google App Engine Standard Local Server.Google App Engine Standard Local Server" />
+      <item itemvalue="Google Cloud Debugger.Google Cloud Debug" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.main" />
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -248,7 +428,14 @@
       <workItem from="1674220351631" duration="44000" />
       <workItem from="1674220414120" duration="764000" />
       <workItem from="1674221414755" duration="616000" />
-      <workItem from="1674235738392" duration="7383000" />
+      <workItem from="1674235738392" duration="14771000" />
+      <workItem from="1674302326438" duration="12967000" />
+      <workItem from="1674351078140" duration="4758000" />
+      <workItem from="1674357098522" duration="4786000" />
+      <workItem from="1674392508801" duration="2556000" />
+      <workItem from="1674409305001" duration="688000" />
+      <workItem from="1674415506170" duration="35000" />
+      <workItem from="1674419912597" duration="7084000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -341,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674237007696</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="before cloud.">
+      <created>1674255444329</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674255444329</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +564,8 @@
     <MESSAGE value="XMLMAPPER IS BAD" />
     <MESSAGE value="exports XML" />
     <MESSAGE value="before cloud." />
-    <option name="LAST_COMMIT_MESSAGE" value="before cloud." />
+    <MESSAGE value="after cloud" />
+    <option name="LAST_COMMIT_MESSAGE" value="after cloud" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -381,5 +576,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -38,6 +38,7 @@ public class TextReader implements Reader {
 
     }
 
+    // TODO: This is weird
     @Override
     public <T> T deserialiseObject(String textString, Class<T> tClass) {
         try {

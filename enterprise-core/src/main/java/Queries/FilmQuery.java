@@ -39,6 +39,7 @@ public class FilmQuery implements DatabaseQuery<Film> {
                         resultSet.getString("review")));
             }
         } catch (SQLException e) {
+            System.out.println("Unable to get all films.");
             e.printStackTrace();
         }
         return films;
@@ -74,8 +75,10 @@ public class FilmQuery implements DatabaseQuery<Film> {
             }
 
         } catch (SQLException e) {
+            System.out.println("Unable to get film by ID");
             e.printStackTrace();
         }
+        // Returns an empty film
         return new Film();
     }
 
@@ -147,6 +150,7 @@ public class FilmQuery implements DatabaseQuery<Film> {
                     System.out.println("Completed Successfully.");
                 }
             } catch (SQLException e) {
+                System.out.println("Unable to update film.");
                 throw new RuntimeException(e);
             }
         }
@@ -177,6 +181,7 @@ public class FilmQuery implements DatabaseQuery<Film> {
                     return result;
                 }
             } catch (SQLException e) {
+                System.out.println("Unable to delete film.");
                 throw new RuntimeException(e);
             }
         }
