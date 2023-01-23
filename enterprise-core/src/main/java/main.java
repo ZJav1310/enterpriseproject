@@ -28,19 +28,14 @@ public class main {
 //        System.out.println(filmA.toString());
 //        System.out.println(JSONReader.getInstance().serialiseObject(film));
 
-        try {
-            DatabaseBuilder databaseBuilder = new DatabaseBuilder();
-            FilmQuery filmQuery = new FilmQuery(databaseBuilder.getDataSourceConnector());
+        DatabaseBuilder databaseBuilder = new DatabaseBuilder("file");
+        FilmQuery filmQuery = new FilmQuery(databaseBuilder.getDataSourceConnector());
 
-            var getByidThing = filmQuery.getById(10015);
+        var getByidThing = filmQuery.getById(10016);
 
-            System.out.println(getByidThing.toString());
+        System.out.println(getByidThing.toString());
 
-        } catch (ParserConfigurationException e) {
-            throw new RuntimeException(e);
-        }
-
-//        TextReader textReader = TextReader.getInstance();
+        //        TextReader textReader = TextReader.getInstance();
 //        System.out.println(textReader.serialiseObject(film));
 //        String text = "#1|Something|1|me|stariis|reviewssasadasdasdsdfsfsfsdasds";
 //        Film filmC = textReader.deserialiseObject(text, Film.class);

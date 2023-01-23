@@ -1,7 +1,7 @@
 package Queries;
 
 import Builders.StatementBuilder;
-import Connectors.DataSourceConnector;
+import Connectors.DatabaseDriver;
 import Models.Film;
 
 import java.sql.ResultSet;
@@ -15,9 +15,9 @@ import java.util.stream.Collectors;
 
 
 public class FilmQuery implements DatabaseQuery<Film> {
-    private final DataSourceConnector d;
+    private final DatabaseDriver d;
 
-    public FilmQuery(DataSourceConnector d) {
+    public FilmQuery(DatabaseDriver d) {
         this.d = d;
     }
 

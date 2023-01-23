@@ -1,43 +1,42 @@
 package Builders;
 
-import Connectors.DataSourceConnector;
-import Connectors.JDBCConnector;
-import Models.DataSourceProp;
+import Connectors.DatabaseDriver;
+import Factory.DatabaseDriverFactory;
+import Models.DatabaseProp;
 import Models.ServerConfig;
 import Utils.JSONReader;
 import Utils.XMLReader;
 
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Objects;
 
 public class DatabaseBuilder {
-    private DataSourceConnector dataSourceConnector;
-    private DataSourceProp dataSourceProp;
-    public DatabaseBuilder() throws ParserConfigurationException {
-        setDataSourceProperties();
-        setDataSourceConnector();
-    }
-
-    // TODO this can be changed so It's not hard coded. -> Reflection : Plugin based Architecture
+    private DatabaseDriver databaseDriver;
+    private final DatabaseProp databaseProp; // Database Properties
 
     /**
-     * Method reads database properties given to assign the correct class/driver.
-     * Currently, it is hard coded to just take local and mudfoot,
-     * However the intention next is for it to read the "driver" field,
-     * and then assign the correct class.
+     * Currently forces user to read database configuration from a file,
+     * Initially done to help with prototyping the rest of project,
+     * However this is a poor implementation since it does not allow the user to
+     * decide if the variables are from File, ENV or elsewhere.
      */
-    private void setDataSourceConnector() {
-        if (Objects.equals(dataSourceProp.getName(), "Local")) {
-            this.dataSourceConnector = new JDBCConnector(dataSourceProp);
+    public DatabaseBuilder(String location){
+        this.databaseProp = setDataSourceProperties(location);
+        if(this.databaseProp != null) {
+            setDatabaseDriver();
         }
-        if (Objects.equals(dataSourceProp.getName(), "Mudfoot")) {
-            this.dataSourceConnector = new JDBCConnector(dataSourceProp);
-        }
-        if (Objects.equals(dataSourceProp.getName(), "GoogleDB")) {
-            this.dataSourceConnector = new JDBCConnector(dataSourceProp);
+    }
+
+    /**
+     * Method called DatabaseDriverFactory,
+     * passes dataSourcepProp derived from reading file (at the moment)
+     */
+    private void setDatabaseDriver() {
+        try{
+            this.databaseDriver = DatabaseDriverFactory.create(databaseProp);
+        } catch (Exception e) {
+            System.err.println("Error retrieving Driver: " + e);
         }
     }
 
@@ -50,32 +49,41 @@ public class DatabaseBuilder {
      */
 
     // Example: C:\Users\ZTedd\ZJ-ENTERPRISE-CONFIG
-    private void setDataSourceProperties() {
-        // parse the JSON file
+    private DatabaseProp setDataSourceProperties(String location) {
+        switch(location.toLowerCase()){
+            case "file": return this.setFromFile();
+            case "env": return this.setFromEnv();
+            default:
+                System.err.println("Unknown Location.");
+        }
+        return null;
+    }
+
+    private DatabaseProp setFromFile(){
         try {
             ServerConfig sc = this.setServerConfig();
 
             String DATASOURCEPROPJSON = System.getProperty("user.home") + "\\ZJ-ENTERPRISE-CONFIG\\DataSources.JSON";
             System.out.println("Trying to get file, expected location: " + DATASOURCEPROPJSON);
-            DataSourceProp[] dataSourcePropList = JSONReader.getInstance().deserialiseObject(Files.readString(Paths.get(DATASOURCEPROPJSON)), DataSourceProp[].class);
+            DatabaseProp[] databasePropList = JSONReader.getInstance().deserialiseObject(Files.readString(Paths.get(DATASOURCEPROPJSON)), DatabaseProp[].class);
 
-            for (DataSourceProp dataSourceProp : dataSourcePropList) {
-                System.out.println("Reading: " + dataSourceProp.getName());
-                if (Objects.equals(dataSourceProp.getName(), sc.getName())) {
-                    System.out.println("Found requested properties of " + dataSourceProp.getName() + " from DataSources.json...setting now.");
-                    this.dataSourceProp = dataSourceProp;
-                    break;
+            for (DatabaseProp databaseProp : databasePropList) {
+                System.out.println("Reading: " + databaseProp.getName());
+                if (Objects.equals(databaseProp.getName(), sc.getName())) {
+                    System.out.println("Found requested properties of " + databaseProp.getName() + " from DataSources.json...setting now.");
+                    return databaseProp;
                 }
             }
 
-        } catch (IOException e) {
-            System.err.println("Database properties could not be found.");
-            throw new RuntimeException(e);
+        } catch (Exception e ) {
+            System.err.println("Database properties could not be found: " + e);
+//            throw new RuntimeException(e);
         }
+        return null;
     }
 
-    public DataSourceConnector getDataSourceConnector() {
-        return dataSourceConnector;
+    private DatabaseProp setFromEnv(){
+        throw new UnsupportedOperationException("ENV is not implemented");
     }
 
     /**
@@ -84,24 +92,25 @@ public class DatabaseBuilder {
      *
      * @return Server Config object
      */
-//    private ServerConfig getServerConfig() {
-//        try {
-//            String SERVERCONFIGXML = System.getProperty("user.home") + "\\ZJ-ENTERPRISE-CONFIG\\ServerConfig.xml";
-//            System.out.println("Trying to get file, expected location: " + SERVERCONFIGXML);
-//            return XMLReader.getInstance().deserialiseObject(Files.readString(Paths.get(SERVERCONFIGXML)), ServerConfig.class);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 
     private ServerConfig setServerConfig() {
+        ServerConfig result;
         try {
             String SERVERCONFIGXML = System.getProperty("user.home") + "\\ZJ-ENTERPRISE-CONFIG\\ServerConfig.xml";
             System.out.println("Trying to get file, expected location: " + SERVERCONFIGXML);
-            return XMLReader.getInstance().deserialiseObject(Files.readString(Paths.get(SERVERCONFIGXML)), ServerConfig.class);
-        } catch (IOException e) {
+            result = XMLReader.getInstance().deserialiseObject(Files.readString(Paths.get(SERVERCONFIGXML)), ServerConfig.class);
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        return result;
+    }
+
+    public DatabaseDriver getDataSourceConnector() {
+        return databaseDriver;
     }
 }
+
+
+
+
 
