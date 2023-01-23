@@ -22,7 +22,7 @@ public class DatabaseBuilder {
      * decide if the variables are from File, ENV or elsewhere.
      */
     public DatabaseBuilder(String location){
-        this.databaseProp = setDataSourceProperties(location);
+        this.databaseProp = setDatabaseProp(location);
         if(this.databaseProp != null) {
             setDatabaseDriver();
         }
@@ -49,7 +49,7 @@ public class DatabaseBuilder {
      */
 
     // Example: C:\Users\ZTedd\ZJ-ENTERPRISE-CONFIG
-    private DatabaseProp setDataSourceProperties(String location) {
+    private DatabaseProp setDatabaseProp(String location) {
         switch(location.toLowerCase()){
             case "file": return this.setFromFile();
             case "env": return this.setFromEnv();
