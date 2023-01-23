@@ -14,33 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="after cloud">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/enterprise_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/enterprise_core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-api/src/main/webapp/WEB-INF/appengine-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/webapp/WEB-INF/appengine-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-api/src/main/java/com/enterpriseproject/enterpriseapi/FilmAPIServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/StatementBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/StatementBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/TextReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Utils/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-data/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-data/src/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/JSONReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/Reader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/TextReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-reader/src/main/java/plugins/XMLReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/controllers/CommandsBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/controllers/CommandsBridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/InsertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/InsertServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -435,7 +411,7 @@
       <workItem from="1674392508801" duration="2556000" />
       <workItem from="1674409305001" duration="688000" />
       <workItem from="1674415506170" duration="35000" />
-      <workItem from="1674419912597" duration="7084000" />
+      <workItem from="1674419912597" duration="8268000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -535,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674255444329</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="after cloud">
+      <created>1674432207986</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674432207986</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
