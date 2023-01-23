@@ -3,13 +3,14 @@ package Models;
 /**
  * Model for Data Source Properties. Data from the file (or wherever else) is mapped to this class.
  */
-public class DataSourceProp {
+public class DatabaseProp {
     private String name;
     private String url;
     private String user;
     private String pass;
     private String port;
     private String schema;
+    private String driver;
 
     public String getName() {
         return name;
@@ -59,6 +60,13 @@ public class DataSourceProp {
         this.schema = schema;
     }
 
+    public String getDriver() {
+        return driver;
+    }
+
+    public void setDriver(String driver) {
+        this.driver = driver;
+    }
 }
 
 

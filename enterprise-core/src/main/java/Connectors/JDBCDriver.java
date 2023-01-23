@@ -1,19 +1,18 @@
 package Connectors;
 
-import Models.DataSourceProp;
+import Models.DatabaseProp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class JDBCConnector implements DataSourceConnector {
-    private final DataSourceProp d;
+public class JDBCDriver implements DatabaseDriver {
+    private DatabaseProp d;
     private Connection c;
 
-    public JDBCConnector(DataSourceProp d) {
+    public JDBCDriver(DatabaseProp d) {
         this.d = d;
     }
-
     private void initialiseConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -18,7 +18,7 @@ public class Commands {
     private final DatabaseQuery<Film> filmQuery;
 
     public Commands() throws ParserConfigurationException {
-        filmQuery = new FilmQuery(new DatabaseBuilder().getDataSourceConnector());
+        filmQuery = new FilmQuery(new DatabaseBuilder("file").getDataSourceConnector());
     }
 
     /**

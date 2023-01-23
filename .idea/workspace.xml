@@ -14,9 +14,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f7c6a7-e6a4-4979-be1e-fa8a19b0bc52" name="Changes" comment="after cloud">
+      <change afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Factory/DatabaseDriverFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/InsertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/java/com/enterpriseproject/enterpriseservlet/InsertServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Builders/DatabaseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/DataSourceConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/DatabaseDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/JDBCConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Connectors/JDBCConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Controllers/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DataSourceProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Models/DatabaseProp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/Queries/FilmQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-core/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterprise-servlet" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise-servlet" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +72,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2JdkiEjBzsK5YzDfLyD7iBjYeSW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -84,7 +92,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20230122_0021",
+    "com.google.cloudcode.ide_session_index": "20230123_0006",
     "jdk.selected.JAVA_MODULE": "11",
     "last_opened_file_path": "C:/Users/ZTedd/ZJ-ENTERPRISE-CONFIG",
     "node.js.detected.package.eslint": "true",
@@ -119,7 +127,14 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
+  <component name="RunManager" selected="Application.main">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="enterprise-core" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Cloud Run: Deploy" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;zjav1310@gmail.com&quot;,&quot;projectId&quot;:&quot;enterpriseproject-375313&quot;,&quot;projectName&quot;:&quot;enterpriseProject&quot;,&quot;projectNumber&quot;:445481889081}" imageBuilder="{&quot;name&quot;:&quot;Buildpacks&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;pom.xml&quot;,&quot;builder&quot;:&quot;gcr.io/buildpacks/builder:v1&quot;}}" gcbSettings="{}">
       <option name="allowRunningInParallel" value="false" />
       <option name="buildEnvironment" value="Local" />
@@ -181,6 +196,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/enterprise_api_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="enterprise-api:war exploded">
@@ -191,6 +207,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="b140f2c8-dd58-4487-bf3a-9a2162d50920" />
+        <option name="HTTP_PORT" value="8081" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -359,6 +376,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.main" />
       <item itemvalue="Cloud Code: Cloud Run.Cloud Run: Deploy" />
       <item itemvalue="Cloud Code: Cloud Run.Cloud Run: Run Locally" />
       <item itemvalue="Cloud Code: Kubernetes.Develop on Kubernetes" />
@@ -367,6 +385,11 @@
       <item itemvalue="Google Cloud Debugger.Google Cloud Debug" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -411,7 +434,10 @@
       <workItem from="1674392508801" duration="2556000" />
       <workItem from="1674409305001" duration="688000" />
       <workItem from="1674415506170" duration="35000" />
-      <workItem from="1674419912597" duration="8268000" />
+      <workItem from="1674419912597" duration="9836000" />
+      <workItem from="1674436117216" duration="1958000" />
+      <workItem from="1674477583043" duration="9963000" />
+      <workItem from="1674498132536" duration="1093000" />
     </task>
     <task id="LOCAL-00001" summary="Core and servlet complete.">
       <created>1672448589980</created>
@@ -518,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674432207986</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="after cloud">
+      <created>1674435062522</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674435062522</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
