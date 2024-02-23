@@ -2,26 +2,10 @@
   {
     "name": "Local",
     "user": "root",
-    "pass": "SiB*u5YMw@Yzd*",
+    "pass": "",
     "url": "127.0.0.1",
     "port": 3306,
     "schema": "universityenterprise"
-  },
-  {
-    "name": "GoogleDB",
-    "user": "root",
-    "pass": "beesting1",
-    "url": "35.246.106.174",
-    "port": 3306,
-    "schema": "universityenterprise"
-  },
-  {
-    "name": "Mudfoot",
-    "user": "javaidzo",
-    "pass": "cRegholp4",
-    "url": "mudfoot.doc.stu.mmu.ac.uk",
-    "port": 6306,
-    "schema": "javaidzo"
   },
   {
     "name": "AWS",
