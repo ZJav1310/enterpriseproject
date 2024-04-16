@@ -1,4 +1,4 @@
-# Enterprise Poject - Films Fullstack - Films Hub
+# Enterprise Project - Films Fullstack - Films Hub
 
 Submodules can be found here:
 - CRUD servlets: https://github.com/ux-zj/enterprise-servlet/tree/master
